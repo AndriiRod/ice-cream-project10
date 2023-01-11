@@ -19,3 +19,18 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+%btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+
+  border-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}
