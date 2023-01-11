@@ -4,11 +4,14 @@
   padding-right: 16px;
   @include smart {
     width: 480px;
+    max-width: 100%;
   }
   @include tab {
     width: 768px;
+    max-width: 100%;
   }
   @include desktop {
     width: 1200px;
+    max-width: 100%;
   }
 }
