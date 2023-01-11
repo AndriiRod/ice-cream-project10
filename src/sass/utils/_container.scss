@@ -2,16 +2,14 @@
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
+  max-width: 480px;
   @include smart {
     width: 480px;
-    max-width: 100%;
   }
   @include tab {
     width: 768px;
-    max-width: 100%;
   }
   @include desktop {
     width: 1200px;
-    max-width: 100%;
   }
 }
