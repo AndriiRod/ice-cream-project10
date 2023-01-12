@@ -93,10 +93,6 @@ button {
   }
 }
 
-.gallery__container {
-  text-align: center;
-}
-
 .gallery__wrapper {
   display: inline-block;
   margin-left: auto;
