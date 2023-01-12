@@ -1,0 +1,34 @@
+.button-location {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 16px;
+  }
+}
+
+.button-item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+}
+.contacts-button {
+  @extend %btn;
+  background: #f8d24e;
+  margin-top: 0;
+  width: 196px;
+  height: 42px;
+  border: transparent;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.contacts-buttontwo{
+    background: #84A178;
+    border: 2px solid #F8D24E;
+border-radius: 10px;
+}
