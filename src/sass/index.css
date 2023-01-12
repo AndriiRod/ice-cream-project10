@@ -1,0 +1,104 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap");
+.container {
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 480px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #84a178;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery {
+  background-image: url(/src/images/mobile/bg_desktop_1x.jpg);
+}
+@media screen and (max-width: 479px) {
+  .gallery {
+    padding-top: 32px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .gallery {
+    padding-top: 32px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding-top: 80px;
+    padding-bottom: 140px;
+  }
+}
+
+.gallery__container {
+  text-align: center;
+}
+
+.gallery__wrapper {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=index.css.map */
