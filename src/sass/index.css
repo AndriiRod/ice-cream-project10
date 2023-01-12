@@ -1,0 +1,271 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap");
+.hero__link, .navigation__link {
+  text-decoration: none;
+}
+
+.hero__list, .navigation__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero__link, .hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #84a178;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container--position {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo__img {
+  min-width: 40px;
+  min-height: 37px;
+}
+
+.navigation {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .navigation {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .navigation {
+    margin-right: 205px;
+  }
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.navigation__link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  color: #fcfcfc;
+}
+
+.hero-button {
+  display: none;
+  background: #f8d24e;
+  border-radius: 10px;
+  width: 152px;
+  height: 42px;
+}
+@media screen and (min-width: 768px) {
+  .hero-button {
+    display: flex;
+  }
+}
+
+.mob-tab-nav-menu-open {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .mob-tab-nav-menu-open {
+    margin-right: 32px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .mob-tab-nav-menu-open {
+    display: none;
+  }
+}
+
+.hero {
+  padding-top: 40px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 14px;
+  }
+}
+
+.hero__cont-position {
+  position: relative;
+  min-height: 357px;
+}
+
+.hero__title {
+  max-width: 247px;
+  font-family: "Seymour One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+
+.hero__list {
+  margin-top: 24px;
+  display: flex;
+}
+
+.hero__item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.hero__link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.hero__description {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hero__description {
+    display: flex;
+    width: 139px;
+    height: 85px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    /* or 17px */
+    color: #fcfcfc;
+    margin-top: 46px;
+    margin-left: 216px;
+  }
+}
+
+.hero__num-coffes,
+.hero__food-trucks {
+  position: absolute;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hero__num-coffes,
+.hero__food-trucks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #131313;
+  }
+}
+
+.hero__num-coffes {
+  right: 32px;
+  top: 14px;
+}
+
+.hero__food-trucks {
+  right: 32px;
+  top: 82px;
+}
+
+.hero__num-coffes-2-prt,
+.hero__food-trucks-2-prrt {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  /* identical to box height */
+  text-align: right;
+  color: #fcfcfc;
+}
+
+.hero__ice {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+}
+
+.hero__points {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=index.css.map */

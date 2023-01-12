@@ -1,0 +1,130 @@
+.hero {
+  padding-top: 40px;
+  position: relative;
+
+  @include tab {
+    padding-top: 14px;
+  }
+}
+
+.hero__cont-position {
+  position: relative;
+  min-height: 357px;
+}
+
+.hero__title {
+  max-width: 247px;
+
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #fcfcfc;
+}
+
+.hero__list {
+  @extend %list;
+  margin-top: 24px;
+  display: flex;
+}
+
+.hero__item {
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+.hero__link {
+  @extend %link;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+
+  @extend %btn;
+}
+
+.hero__description {
+  display: none;
+
+  @include tab {
+    display: flex;
+    width: 139px;
+    height: 85px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    /* or 17px */
+
+    color: #fcfcfc;
+
+    margin-top: 46px;
+    margin-left: 216px;
+  }
+}
+
+.hero__num-coffes,
+.hero__food-trucks {
+  position: absolute;
+  display: none;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #131313;
+  }
+}
+
+.hero__num-coffes {
+  right: 32px;
+  top: 14px;
+}
+
+.hero__food-trucks {
+  right: 32px;
+  top: 82px;
+}
+
+.hero__num-coffes-2-prt,
+.hero__food-trucks-2-prrt {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #fcfcfc;
+}
+
+.hero__ice {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+}
+
+.hero__points {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
