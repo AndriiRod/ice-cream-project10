@@ -1,0 +1,110 @@
+.custom-reviews {
+  padding-top: 178px;
+  padding-bottom: 393px;
+  background-image: url(../images/mobile/mobile-backgroud@1x.jpg);
+  @include retina {
+    background-image: url(../images/mobile/mobile-backgroud@2x.jpg);
+  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  @include smart {
+    padding-top: 257px;
+    padding-bottom: 408px;
+  }
+  @include tab {
+    padding-top: 283px;
+    padding-bottom: 379px;
+    background-image: url(../images/tab/background_tablet@1x.jpg);
+    @include retina {
+      background-image: url(../images/tab/background_tablet@2x.jpg);
+    }
+  }
+  @include desktop {
+    padding-top: 464px;
+    padding-bottom: 228px;
+    background-image: url(../images/desktop/backgroud_desktop@1x.jpg);
+    @include retina {
+      background-image: url(../images/desktop/backgroud_desktop@2x.jpg);
+    }
+  }
+  &__img {
+    margin: 0 auto;
+    margin-bottom: 32px;
+
+    border-radius: 50%;
+  }
+  &__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 45px;
+    max-width: 280px;
+    height: 256px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+
+    border-radius: 10px;
+    background-color: $main-bg-color;
+
+    font-size: 12px;
+    line-height: 2.55;
+    text-align: center;
+    color: $main-text-color;
+
+    @include tab {
+      max-width: 705px;
+      padding: 28px 80px;
+      height: 138px;
+
+      font-size: 14px;
+      line-height: 1.86;
+    }
+    @include desktop {
+      max-width: 968px;
+      padding: 42px 121px;
+      height: 138px;
+
+      font-size: 16px;
+    }
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.86;
+
+    margin-bottom: 32px;
+
+    text-align: center;
+
+    color: $secondary-text-color;
+  }
+}
+.slick-dots {
+  li button::before {
+    font-size: 12px;
+    line-height: 0.41;
+
+    color: #d9d9d9;
+    opacity: 1;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier;
+  }
+  li.slick-active button:before {
+    color: $main-bg-color;
+    opacity: 1;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier;
+  }
+}
+// .slick-next::before {
+//   content: '';
+//   background-image: url(../images/desktop/right-arrow.png);
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   width: 20px;
+//   height: 20px;
+// }
