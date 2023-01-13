@@ -5,11 +5,17 @@
   width: 100%;
   @include smart {
     width: 480px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   @include tab {
     width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   @include desktop {
     width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
