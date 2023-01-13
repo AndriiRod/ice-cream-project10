@@ -1,0 +1,215 @@
+.products {
+  padding: 60px 0;
+  background-image: url('../images/mobile/mobile-backgroud@1x.jpg');
+
+  @include retina {
+    background-image: url('../images/mobile/mobile-backgroud@2x.jpg');
+  }
+}
+
+.products__label {
+  display: block;
+  
+  margin-bottom: 12px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+}
+
+.products__title {
+  margin-bottom: 40px;
+
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.27;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include desktop {
+    margin-bottom: 183px;
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+    @include desktop {
+        margin: 0 -16px;
+      }
+}
+
+.products__item {
+  display: flex;
+  width: 280px;
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  
+  @include smart {
+    width: 250px;
+  }
+
+  @include tab {
+    width: calc((100% - 16px * 4) / 3);
+    &:not(:last-child) {
+      margin-right: 16px;
+      margin-bottom: 0px;
+    }
+  }
+
+  @include desktop {
+    width: calc((100% - 30px * 4) / 3);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.products__card {  
+  display: flex;
+  padding-top: 108px;
+}
+
+.products__discript {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  border-radius: 24px;
+  padding: 123px 40px 16px;
+
+  @include smart {      
+      padding: 123px 25px 16px;
+    }
+
+  @include desktop {
+    padding: 165px 64px 60px;
+  }
+}
+
+.ice-cream {
+  background: #AEC6A5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% -60%;
+    width: 200px;
+    height: 211px;
+    background-color: rgba(156, 190, 143, 0.7);
+    background-image: url('../images/mobile/mobile_buy_now_1@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+    border-radius: 50%;
+
+    @include desktop {
+        width: 302px;
+        height: 318px;
+      }
+  }
+}
+
+.ice-coffee {
+  background: #EFD478;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% -60%;
+    width: 200px;
+    height: 211px;
+    background-color: #EFD478;
+    background-image: url('../images/mobile/mobile_buy_now_2@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0px 5.34219px 20.0332px rgba(153, 114, 23, 0.25);
+    border-radius: 50%;
+
+    @include desktop {
+        width: 302px;
+        height: 318px;
+      }
+  }
+}
+
+.milkshakes {
+  background: #D6936D;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% -60%;
+    width: 200px;
+    height: 211px;
+    background-color: #D6936D;
+    background-image: url('../images/mobile/mobile_buy_now_3@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0px 5.34219px 20.0332px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+
+    @include desktop {
+        width: 302px;
+        height: 318px;
+      }
+  }
+}
+
+.products__discript-title {
+  margin-bottom: 40px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;  
+  color: $secondary-text-color;
+
+  @include desktop {
+      margin-bottom: 66px;
+    }
+}
+
+.products__discript-text {
+  margin-bottom: 100px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $secondary-text-color;
+}
+
+.products__discript-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+
+  background-color: transparent;
+}
