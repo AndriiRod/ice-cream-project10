@@ -1,0 +1,273 @@
+
+.contacts {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  background-color: $main-bg-color;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+  @include tab {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.heading {
+  @extend %visually-hidden;
+}
+
+.contactslist {
+  @include tab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.contactlist__item {
+  height: 100%;
+}
+.contactlist__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+  @include tab {
+    margin-right: 16px;
+  }
+  @include desktop {
+    margin-right: 32px;
+  }
+}
+.contactlist__item:last-child {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 20px;
+  }
+  @include smart {
+    margin-bottom: 24px;
+  }
+  @include tab {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__card {
+  background: $main-text-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 767px) {
+    max-width: 280px;
+    height: 412px;
+    padding-left: 32px;
+    padding-right: 36px;
+    padding-bottom: 24px;
+  }
+  @include tab {
+    width: 224px;
+    height: 537px;
+    padding-left: 24px;
+    padding-right: 27px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    width: 368px;
+    height: 542px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.contacts__card-title {
+  width: 88px;
+  height: 22px;
+  background: $accent-color;
+  border-radius: 4px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+ @include tab {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts__card-category {
+  letter-spacing: 0.04em;
+  color: $secondary-text-color;
+  @media screen and (max-width: 767px) {
+    padding: 4px 22px 4px 22px;
+    line-height: 1.17;
+  }
+  @include tab {
+    padding: 4px 13px 4px 13px;
+    font-size: 16px;
+    line-height: 1.38;
+  }
+  @include desktop {
+    padding: 4px 14px 4px 14px;
+  }
+}
+
+.contacts__card-pretitle {
+  color: $secondary-text-color;
+  letter-spacing: 0.04em;
+  @media screen and (max-width: 767px) {
+    line-height: 1.83;
+    margin-bottom: 8px;
+  }
+  @include tab {
+    line-height: 1.86;
+    margin-bottom: 12px;
+  }
+  @include desktop {
+    line-height: 1.88;
+    margin-bottom: 8px;
+  }
+}
+.contacts__link {
+  color: #d6936d;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+}
+.contacts__map,
+.contacts__workshorthour {
+  border-bottom: 1px solid #E1E1E1;
+   @media screen and (max-width: 767px) {
+    padding-bottom: 24px;
+  }
+  @include tab {
+    padding-bottom: 32px;
+  }
+}
+.contacts__workday{
+  color: #131313;
+  line-height: 1.86;
+  @media screen and (max-width: 767px) {
+    margin-top: 24px;
+  }
+  @include tab {
+    margin-top: 32px;
+  }
+}
+.contacts__workshortday{
+  color: $secondary-text-color;
+  line-height: 1.86;
+}
+
+.contacts__workhour,
+.contacts__workshorthour{
+line-height: 1.86;
+color: $btn-bg-disabled;
+}
+
+.contacts__workhour{
+    @media screen and (max-width: 1199px) {
+    margin-bottom: 8px;
+  }
+  @include desktop {
+    margin-bottom: 12px;
+  }
+}
+
+.contacts__workshorthour{
+  border-bottom: 1px solid #E1E1E1;
+}
+
+
+.contakts__connection{
+  @media screen and (max-width: 767px) {
+    margin-top: 24px;
+  }
+  @include tab {
+    margin-top: 32px;
+  }
+}
+.contakts__connection-link{
+  line-height: 1.60;
+color: $secondary-text-color;
+}
+.contakts__connection-items:not(:last-child){
+    @media screen and (max-width: 767px) {
+    margin-bottom: 6px;
+  }
+  @include tab {
+    margin-bottom: 4px;
+  }
+}
+
+
+
+// button
+
+.contacts__button-list {
+  @include tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+.contacts__button-item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+}
+
+.contacts__button {
+  @extend %btn;
+  background: $accent-color;
+  width: 196px;
+  height: 42px;
+  color: #000000;
+  transition: backgraund $animation-speed-hover $animation-cubic-bezier;
+  gap: 4px;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.contacts__button-light {
+  &:hover {
+    background: $btn-bg-hover;
+    color: $secondary-text-color;
+  }
+  &:focus {
+    background: $btn-bg-hover;
+    color: $main-text-color;
+  }
+
+  &:hover svg {
+    fill: $secondary-text-color;
+  }
+  &:focus svg {
+    fill: $main-text-color;
+  }
+}
+.contacts__button-dark {
+  background: $main-bg-color;
+  border: 2px solid $accent-color;
+  &:hover {
+    background: $main-bg-color;
+    color: $secondary-text-color;
+    border: 2px solid $btn-bg-hover;
+  }
+  &:focus {
+    background: $main-bg-color;
+    color: $main-text-color;
+    border: 2px solid $btn-bg-hover;
+  }
+  &:hover svg {
+    fill: $secondary-text-color;
+  }
+  &:focus svg {
+    fill: $main-text-color;
+  }
+}
