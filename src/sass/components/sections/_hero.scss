@@ -1,6 +1,5 @@
 .hero {
   padding-top: 50px;
-  position: relative;
 
   @include smart {
     padding-top: 40px;
@@ -105,7 +104,6 @@
 }
 
 .hero--decoration-first-btn {
-  border-radius: 8px;
   padding: 11px 26px;
   min-width: 108px;
   border: 2px solid #f8d24e;
@@ -116,7 +114,8 @@
     padding: 12px 34px;
   }
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero--decoration-first-btn:hover {
@@ -128,7 +127,7 @@
 }
 
 .hero--decoration-first-btn:disabled {
-  border-color: #ABABAB;
+  border-color: #ababab;
 }
 
 .hero--decoration-sec-btn {
@@ -144,15 +143,15 @@
 }
 
 .hero--decoration-sec-btn:hover {
-color: #0A8817;
+  color: #0a8817;
 }
 
 .hero--decoration-sec-btn:focus {
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .hero--decoration-sec-btn:disabled {
-  color: #ABABAB;
+  color: #ababab;
 }
 
 .hero__descriptions-container {
@@ -177,7 +176,7 @@ color: #0A8817;
     color: #fcfcfc;
 
     margin-top: 46px;
-    margin-left: 216px;
+    margin-left: 184px;
   }
 
   @include desktop {
@@ -201,11 +200,11 @@ color: #0A8817;
     display: flex;
     position: absolute;
     bottom: -24px;
-    left: 217px;
+    left: 184px;
   }
 
-  @include tab {
-    left: 242px;
+  @include desktop {
+    left: 241px;
   }
 }
 

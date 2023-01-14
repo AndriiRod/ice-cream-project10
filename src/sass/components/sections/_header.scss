@@ -1,6 +1,6 @@
 .container--position {
-  display: flex;
-  align-items: center;
+  position: relative;
+
   margin-top: 12px;
 
   @include smart {
@@ -12,12 +12,17 @@
   }
 }
 
+.mobile-navigation-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   margin-right: auto;
 
-  //   @media screen and (min-width: 1199px) {
-  //     margin-right: 308px;
-  //   }
+  @media screen and (min-width: 1199px) {
+    margin-right: 308px;
+  }
 }
 
 .logo__img {
@@ -84,16 +89,17 @@
   width: 152px;
   height: 42px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include tab {
     display: flex;
   }
 }
 
-.mob-tab-nav-menu-open {
+.mobile-menu-button {
   background-color: transparent;
-  border: 1px solid transparent;
+  border: none;
   padding: 0px;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -101,6 +107,18 @@
   }
 
   @media screen and (min-width: 1199px) {
+    display: none;
+  }
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
     display: none;
   }
 }
@@ -115,6 +133,5 @@
 }
 
 .hero-button:disabled {
-  background-color: #ABABAB;
-  
+  background-color: #ababab;
 }

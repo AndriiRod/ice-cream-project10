@@ -1,17 +1,17 @@
 @charset "UTF-8";
 @import '~node_modules/modern-normalize/modern-normalize.css';
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap");
-.hero__link, .navigation__link {
+.mobile-menu__link, .hero__link, .navigation__link {
   text-decoration: none;
 }
 
-.hero__list, .navigation__list {
+.mobile-menu__list, .hero__list, .navigation__list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.hero__link, .hero-button {
+.mobile-menu__button, .hero__link, .hero-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,8 +78,7 @@ img {
 }
 
 .container--position {
-  display: flex;
-  align-items: center;
+  position: relative;
   margin-top: 12px;
 }
 @media screen and (min-width: 480px) {
@@ -93,8 +92,18 @@ img {
   }
 }
 
+.mobile-navigation-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   margin-right: auto;
+}
+@media screen and (min-width: 1199px) {
+  .logo {
+    margin-right: 308px;
+  }
 }
 
 .logo__img {
@@ -158,20 +167,29 @@ img {
   }
 }
 
-.mob-tab-nav-menu-open {
+.mobile-menu-button {
   background-color: transparent;
-  border: 1px solid transparent;
+  border: none;
   padding: 0px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .mob-tab-nav-menu-open {
+  .mobile-menu-button {
     margin-right: 32px;
   }
 }
 @media screen and (min-width: 1199px) {
-  .mob-tab-nav-menu-open {
+  .mobile-menu-button {
     display: none;
   }
+}
+.mobile-menu-button .icon-cross {
+  display: none;
+}
+.mobile-menu-button.is-open .icon-cross {
+  display: block;
+}
+.mobile-menu-button.is-open .icon-menu {
+  display: none;
 }
 
 .hero-button:hover {
@@ -184,12 +202,11 @@ img {
 }
 
 .hero-button:disabled {
-  background-color: #ABABAB;
+  background-color: #ababab;
 }
 
 .hero {
   padding-top: 50px;
-  position: relative;
 }
 @media screen and (min-width: 480px) {
   .hero {
@@ -298,7 +315,6 @@ img {
 }
 
 .hero--decoration-first-btn {
-  border-radius: 8px;
   padding: 11px 26px;
   min-width: 108px;
   border: 2px solid #f8d24e;
@@ -321,7 +337,7 @@ img {
 }
 
 .hero--decoration-first-btn:disabled {
-  border-color: #ABABAB;
+  border-color: #ababab;
 }
 
 .hero--decoration-sec-btn {
@@ -338,15 +354,15 @@ img {
 }
 
 .hero--decoration-sec-btn:hover {
-  color: #0A8817;
+  color: #0a8817;
 }
 
 .hero--decoration-sec-btn:focus {
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .hero--decoration-sec-btn:disabled {
-  color: #ABABAB;
+  color: #ababab;
 }
 
 .hero__descriptions-container {
@@ -369,7 +385,7 @@ img {
     /* or 17px */
     color: #fcfcfc;
     margin-top: 46px;
-    margin-left: 216px;
+    margin-left: 184px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -392,12 +408,12 @@ img {
     display: flex;
     position: absolute;
     bottom: -24px;
-    left: 217px;
+    left: 184px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero__img-pointer {
-    left: 242px;
+    left: 241px;
   }
 }
 
@@ -517,4 +533,88 @@ img {
     bottom: 65px;
     left: 16px;
   }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.is-open {
+  padding: 52px 20px 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 44.5px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #84a178;
+  z-index: 999;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu.is-open {
+    padding: 40px 20px 0px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu.is-open {
+    padding: 76px 32px 0px 32px;
+  }
+}
+
+.mobile-menu__list {
+  margin-bottom: 110px;
+  text-align: center;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__item {
+    margin-bottom: 114px;
+  }
+}
+
+.mobile-menu__link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #fcfcfc;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__link {
+    font-size: 48px;
+    line-height: 59px;
+  }
+}
+
+.mobile-menu__link:hover,
+.mobile-menu__link:focus {
+  color: #131313;
+}
+
+.mobile-menu__button {
+  line-height: 1.21;
+  color: #000000;
+  background: #f8d24e;
+  padding: 12px 36px;
+  width: 152px;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__button {
+    display: none;
+  }
+}
+
+.mobile-menu-button.is-open ~ .hero-button {
+  display: none;
+}
+
+.mobile-menu-button.is-open {
+  margin-right: 0px;
 }/*# sourceMappingURL=index.css.map */
