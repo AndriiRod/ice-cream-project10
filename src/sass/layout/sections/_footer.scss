@@ -1,0 +1,115 @@
+.footer {
+}
+.footer__blocks {
+  @include tab {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include desktop {
+    align-items: flex-end;
+  }
+}
+
+.footer__title {
+  margin-bottom: 16px;
+  max-width: 240px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  color: $main-text-color;
+  @include tab {
+    margin-bottom: 8px;
+    max-width: 352px;
+    font-size: 26px;
+    line-height: 1.23;
+  }
+  @include desktop {
+    margin-bottom: 14px;
+    max-width: 504px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+.footer__subtitle {
+  max-width: 200px;
+  margin-bottom: 60px;
+  @extend .footer__title;
+  font-size: 34px;
+  line-height: 1.23;
+  @include tab {
+    max-width: 352px;
+    font-size: 48px;
+  }
+  @include desktop {
+    max-width: 497px;
+    font-weight: 700;
+    font-size: 58px;
+  }
+}
+.footer__contact-block {
+  @include tab {
+    margin-top: 61px;
+  }
+}
+.social__list {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+  @include tab {
+    margin-bottom: 34px;
+  }
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__icon {
+  fill: #84a178;
+  transition: $animation-speed-hover $animation-cubic-bezier;
+}
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: $main-text-color;
+}
+.footer__contact {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: right;
+  color: $secondary-text-color;
+  @include tab {
+    margin-bottom: 60px;
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+}
+.footer__contact-phone {
+  color: #fcfcfc;
+}
+.footer__copyright {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #e1e1e1;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  color: #7a7a7a;
+  @include tab {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 1.86;
+  }
+  @include desktop {
+    font-size: 12px;
+  }
+}
