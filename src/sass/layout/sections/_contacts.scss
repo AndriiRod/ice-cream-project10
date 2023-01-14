@@ -1,9 +1,8 @@
-
 .contacts {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 500;
-  background-color: $main-bg-color;
+
+  transform: translateY(60px);
+  padding-bottom: 60px;
   @media screen and (max-width: 767px) {
     font-size: 12px;
   }
@@ -15,12 +14,8 @@
   }
 }
 
-.heading {
-  @extend %visually-hidden;
-}
-
 .contactslist {
-  @include tab{
+  @include tab {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -93,7 +88,7 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
- @include tab {
+  @include tab {
     margin-bottom: 32px;
   }
 }
@@ -138,15 +133,15 @@
 }
 .contacts__map,
 .contacts__workshorthour {
-  border-bottom: 1px solid #E1E1E1;
-   @media screen and (max-width: 767px) {
+  border-bottom: 1px solid #e1e1e1;
+  @media screen and (max-width: 767px) {
     padding-bottom: 24px;
   }
   @include tab {
     padding-bottom: 32px;
   }
 }
-.contacts__workday{
+.contacts__workday {
   color: #131313;
   line-height: 1.86;
   @media screen and (max-width: 767px) {
@@ -156,19 +151,19 @@
     margin-top: 32px;
   }
 }
-.contacts__workshortday{
+.contacts__workshortday {
   color: $secondary-text-color;
   line-height: 1.86;
 }
 
 .contacts__workhour,
-.contacts__workshorthour{
-line-height: 1.86;
-color: $btn-bg-disabled;
+.contacts__workshorthour {
+  line-height: 1.86;
+  color: $btn-bg-disabled;
 }
 
-.contacts__workhour{
-    @media screen and (max-width: 1199px) {
+.contacts__workhour {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 8px;
   }
   @include desktop {
@@ -176,12 +171,11 @@ color: $btn-bg-disabled;
   }
 }
 
-.contacts__workshorthour{
-  border-bottom: 1px solid #E1E1E1;
+.contacts__workshorthour {
+  border-bottom: 1px solid #e1e1e1;
 }
 
-
-.contakts__connection{
+.contakts__connection {
   @media screen and (max-width: 767px) {
     margin-top: 24px;
   }
@@ -189,20 +183,18 @@ color: $btn-bg-disabled;
     margin-top: 32px;
   }
 }
-.contakts__connection-link{
-  line-height: 1.60;
-color: $secondary-text-color;
+.contakts__connection-link {
+  line-height: 1.6;
+  color: $secondary-text-color;
 }
-.contakts__connection-items:not(:last-child){
-    @media screen and (max-width: 767px) {
+.contakts__connection-items:not(:last-child) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 6px;
   }
   @include tab {
     margin-bottom: 4px;
   }
 }
-
-
 
 // button
 
