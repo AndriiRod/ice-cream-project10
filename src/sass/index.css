@@ -747,28 +747,6 @@ button {
   fill: #fcfcfc;
 }
 
-.footer {
-  background-color: #84a178;
-  margin-top: 60px;
-}
-@media screen and (min-width: 768px) {
-  .footer {
-    margin-top: 40px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer {
-    margin-top: 120px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .footer__blocks {
     display: flex;
@@ -834,23 +812,23 @@ button {
   }
 }
 
-.social {
+.social__list {
   display: flex;
   justify-content: right;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  .social {
+  .social__list {
     margin-bottom: 34px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .social {
+  .social__list {
     margin-bottom: 40px;
   }
 }
 
-.social__list:not(:last-child) {
+.social__item:not(:last-child) {
   margin-right: 20px;
 }
 
