@@ -1,0 +1,136 @@
+.container--position {
+  position: relative;
+
+  margin-top: 12px;
+
+  @include smart {
+    margin-top: 14px;
+  }
+
+  @include tab {
+    margin-top: 19px;
+  }
+}
+
+.mobile-navigation-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+
+  @media screen and (min-width: 1199px) {
+    margin-right: 308px;
+  }
+}
+
+.logo__img {
+  min-width: 40px;
+  min-height: 37px;
+}
+
+.navigation {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1199px) {
+    margin-right: 205px;
+  }
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item {
+  &:not(:last-child) {
+    margin-right: 28px;
+  }
+}
+
+.navigation__link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  display: flex;
+  align-items: center;
+
+  color: $main-text-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: $accent-color;
+}
+
+.hero-button {
+  display: none;
+
+  @extend %btn;
+
+  background: $accent-color;
+  border-radius: 10px;
+
+  width: 152px;
+  height: 42px;
+
+  transition: background-color $animation-speed-hover $animation-cubic-bezier,
+    color $animation-speed-hover c$animation-cubic-bezier;
+
+  @include tab {
+    display: flex;
+  }
+}
+
+.button-duy {
+  margin-right: 4px;
+}
+
+.mobile-menu-button {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1199px) {
+    display: none;
+  }
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+
+.hero-button:hover {
+  background-color: $btn-bg-hover;
+}
+
+.hero-button:focus {
+  background-color: $btn-bg-hover;
+  color: #ffffff;
+}
+
+.hero-button:disabled {
+  background-color: $btn-bg-disabled;
+}
