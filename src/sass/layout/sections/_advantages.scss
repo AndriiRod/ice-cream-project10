@@ -2,7 +2,31 @@
 
 &_list {
     padding: 0;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+        
+        @media screen and (min-width: 1200px) {
+            max-width: 1168px;
+            gap: 32px;
+        }
+    }
 }
+&_items {
+    max-width: 230px;
+    
+    @media screen and (min-width: 768px) {
+        max-width: 152px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 368px;
+    }
+}
+
      
 &-background_svg {
     position: relative;
@@ -42,7 +66,7 @@ color: #FCFCFC;
  }
 
  &_text {
-    width: 230px;
+    
     margin-left: auto;
     margin-right: auto;
 margin-bottom: 28px;
