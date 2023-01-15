@@ -6,9 +6,23 @@
   }
   @include tab {
     font-size: 14px;
+    padding-bottom: 40px;
   }
   @include desktop {
     font-size: 16px;
+    padding-bottom: 120px;
+  }
+}
+.contacts__wrap {
+  margin-top: -353px;
+  @include smart {
+    margin-top: -349px;
+  }
+  @include tab {
+    margin-top: -299px;
+  }
+  @include desktop {
+    margin-top: -128px;
   }
 }
 
