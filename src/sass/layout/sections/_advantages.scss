@@ -10,20 +10,20 @@
         gap: 80px;
         
         @media screen and (min-width: 1200px) {
-            max-width: 1168px;
             gap: 32px;
         }
     }
 }
 &_items {
     max-width: 230px;
+    margin-left: auto;margin-right: auto;
     
     @media screen and (min-width: 768px) {
         max-width: 152px;
     }
 
     @media screen and (min-width: 1200px) {
-        max-width: 368px;
+       width: 368px;
     }
 }
 
