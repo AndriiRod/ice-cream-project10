@@ -1,6 +1,4 @@
 .container--position {
-  position: relative;
-
   margin-top: 12px;
 
   @include smart {
@@ -90,9 +88,29 @@
   @include tab {
     display: flex;
   }
+
+  &:hover {
+    background-color: $btn-bg-hover;
+  }
+
+  &:focus {
+    background-color: $btn-bg-hover;
+    color: #ffffff;
+  }
+
+  &:disabled {
+    background-color: $btn-bg-disabled;
+  }
 }
 
-.button-duy {
+.hero-button__arrow {
+  fill: currentColor;
+  &:focus {
+    color: #ffffff;
+  }
+}
+
+.hero-button__buy {
   margin-right: 4px;
 }
 
@@ -120,17 +138,4 @@
   &.is-open .icon-menu {
     display: none;
   }
-}
-
-.hero-button:hover {
-  background-color: $btn-bg-hover;
-}
-
-.hero-button:focus {
-  background-color: $btn-bg-hover;
-  color: #ffffff;
-}
-
-.hero-button:disabled {
-  background-color: $btn-bg-disabled;
 }
