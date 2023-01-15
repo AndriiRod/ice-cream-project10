@@ -1,0 +1,28 @@
+.gallery {
+  margin-bottom: -99px;
+  @include smart {
+    margin-bottom: -176px;
+  }
+  @include tab {
+    margin-bottom: -183px;
+  }
+  @include desktop {
+    margin-bottom: -324px;
+  }
+}
+.gallery__list {
+}
+.gallery__item {
+}
+
+.gallery__img {
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 8px;
+  @include tab {
+    border-radius: 18px;
+  }
+  @include desktop {
+    border-radius: 24px;
+  }
+}

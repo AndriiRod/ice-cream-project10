@@ -1,8 +1,8 @@
 <section class="gallery">
   <div class="container">
     <div class="gallery__list">
-      <div class="gallery__item">
-        <!-- <picture>
+      <!-- <div class="gallery__item">
+        <picture>
           <source
             srcset="
               ./images/desktop/desktop_gallery_1_1x.jpg 1x,
@@ -30,8 +30,8 @@
             alt="ice cream cones"
           />
         </picture>
-      </div>
-      <div class="gallery__item">
+      </div> -->
+      <!-- <div class="gallery__item">
         <picture>
           <source
             srcset="
@@ -60,8 +60,8 @@
             alt="ice cream cones 2"
           />
         </picture>
-      </div>
-      <div class="gallery__item">
+      </div> -->
+      <!-- <div class="gallery__item">
         <picture>
           <source
             srcset="
@@ -89,7 +89,44 @@
             src="./images/desktop/desktop_gallery_3_1x.jpg"
             alt="three ice cream's on a stick"
           />
-        </picture> -->
+        </picture>
+      </div> -->
+      <div class="gallery__item">
+        <picture>
+          <source
+            srcset="
+              ./images/desktop/desktop_gallery_1@1x-min.jpg 1x,
+              ./images/desktop/desktop_gallery_1@1x-min.jpg 2x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/tab/tab_gallery_1@1x-min.jpg 1x,
+              ./images/tab/tab_gallery_1@1x-min.jpg 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/mobile/mobile_gallery_1@1x-min.jpg 1x,
+              ./images/mobile/mobile_gallery_1@1x-min.jpg 2x
+            "
+            media="(min-width:480px)"
+          />
+          <source
+            srcset="
+              ./images/mobile/mobile320_gallery_1@1x-min.jpg 1x,
+              ./images/mobile/mobile320_gallery_1@1x-min.jpg 1x
+            "
+            media="(min-width:320px)"
+          />
+          <img
+            src="./images/desktop/desktop_gallery_1@1x-min.jpg"
+            alt="ice cream cones"
+            class="gallery__img"
+          />
+        </picture>
       </div>
     </div>
   </div>
