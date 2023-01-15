@@ -58,20 +58,15 @@
 
       <button
         type="button"
-        class="mobile-menu-button"
+        class="mobile-menu-button js-open-menu"
         aria-controls="mobile-menu"
         aria-label="mobile menu switch"
         aria-expanded="false"
-        data-menu-button
       >
         <svg width="32" height="32">
           <use
-            class="icon-menu js-open-menu"
+            class="icon-menu"
             href="././images/icon.svg#icon-mobile_menu"
-          ></use>
-          <use
-            class="icon-cross js-close-menu"
-            href="././images/icon.svg#icon-close"
           ></use>
         </svg>
       </button>
@@ -84,24 +79,71 @@
       </button>
     </div>
 
-    <div class="mobile-menu" data-menu id="mobile-menu">
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <div class="mobile-menu__position-heder container">
+        <div class="logo">
+          <a href="././index.html" class="logo__link">
+            <picture>
+              <source
+                srcset="
+                  ././images/mobile/mobile_tablet_logo@1x.png 1x,
+                  ././images/mobile/mobile_tablet_logo@2x.png 2x
+                "
+                media="(min-width: 480px)"
+              />
+              <source
+                srcset="
+                  ././images/mobile/mobile_logo@1x.png 1x,
+                  ././images/mobile/mobile_logo@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                srcset="
+                  ././images/mobile/mobile_tablet_logo@1x.png 1x,
+                  ././images/mobile/mobile_tablet_logo@2x.png 2x
+                "
+                src="././images/mobile/mobile_tablet_logo@1x.png"
+                alt="logo"
+                class="logo__img"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <button type="button" class="mobile-menu-button js-close-menu">
+          <svg width="32" height="32">
+            <use class="icon-cross" href="././images/icon.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
       <nav class="mobile-menu__navigation">
         <ul class="mobile-menu__list">
           <li class="mobile-menu__item">
             <a href="././index.html" class="mobile-menu__link">Home</a>
           </li>
           <li class="mobile-menu__item">
-            <a href="#how-its-made" class="mobile-menu__link">How it’s made?</a>
+            <a href="#how-its-made" class="mobile-menu__link js-how-close-menu"
+              >How it’s made?</a
+            >
           </li>
           <li class="mobile-menu__item">
-            <a href="#products" class="mobile-menu__link">Our products</a>
+            <a
+              href="#products"
+              class="mobile-menu__link js-our-products-close-menu"
+              >Our products</a
+            >
           </li>
           <li class="mobile-menu__item">
-            <a href="#contact" class="mobile-menu__link">Contact</a>
+            <a href="#contact" class="mobile-menu__link js-contacts-close-menu"
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
-      <button type="button" class="mobile-menu__button">
+      <button type="button" class="mobile-menu__button js-buy-now-close-menu">
         <span class="hero-button__buy">Buy now</span>
         <svg width="12" height="12" class="hero-button__arrow">
           <use href="././images/icon.svg#icon-arrow-right"></use>
