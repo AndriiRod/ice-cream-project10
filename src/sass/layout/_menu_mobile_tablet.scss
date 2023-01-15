@@ -1,29 +1,21 @@
 .mobile-menu {
-  // transform: translateX(-100%);
-  display: none;
-  // opacity: 0;
-  // visibility: hidden;
-  // pointer-events: none;
-  
+  transform: translateY(-100%);
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
 
-  // transition: opacity 2000ms linear, visibility 2000ms linear;
-
-}
-
-.mobile-menu.is-open {
-  //     transform: translate(-100%, -100%) scale(0.9);
-  // opacity: 0;
-  // transform: translateX(0);
-  // opacity: 1;
-  // visibility: visible;
-  // pointer-events: initial;
+  transition: visibility 250ms linear, transform 250ms linear;
 
   padding: 52px 20px 0px 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+
   top: 50px;
   left: 0;
   width: 100%;
@@ -31,7 +23,7 @@
 
   background-color: $main-bg-color;
 
-  z-index: 999;
+  z-index: 9;
 
   @include smart {
     padding: 40px 20px 0px 20px;
@@ -42,6 +34,13 @@
     padding: 76px 32px 0px 32px;
     top: 64px;
   }
+}
+
+.mobile-menu.is-open {
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: initial;
+  transition: visibility 250ms linear, transform 250ms linear;
 }
 
 .mobile-menu__list {
@@ -109,7 +108,9 @@
 }
 
 .mobile-menu-button.is-open ~ .hero-button {
-  display: none;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .mobile-menu-button.is-open {
