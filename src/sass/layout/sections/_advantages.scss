@@ -1,84 +1,139 @@
 .advantages {
-  &_list {
-    padding: 0;
-
-    @media screen and (min-width: 768px) {
+  padding-bottom: 64px;
+  @include smart {
+    padding-bottom: 60px;
+  }
+  @include tab {
+    padding-bottom: 204px;
+  }
+  @include desktop {
+    padding-bottom: 178px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    @include smart {
+      gap: 32px;
+    }
+    @include tab {
       display: flex;
       flex-direction: row;
       justify-content: center;
       gap: 80px;
+    }
+    @include desktop {
+      gap: 120px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-      @media screen and (min-width: 1200px) {
-        gap: 32px;
+    @include tab {
+      width: calc((100% - 160px) / 3);
+    }
+
+    @include desktop {
+      width: calc((100% - 240px) / 3);
+    }
+  }
+
+  &__background {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: $accent-color;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    @include tab {
+      margin-bottom: 32px;
+    }
+    @include desktop {
+      margin-bottom: 40px;
+    }
+    &::before {
+      content: '';
+      display: inline-flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    &--cow::before {
+      background-image: url(../images/mobile/cow_icon@1x.png);
+      @include retina {
+        background-image: url(../images/mobile/cow_icon@2x.png);
+      }
+    }
+    &--weight::before {
+      background-image: url(../images/mobile/weight_icon@1x.png);
+      @include retina {
+        background-image: url(../images/mobile/weight_icon@2x.png);
+      }
+    }
+    &--ice::before {
+      background-image: url(../images/mobile/ice-crema_icon@1x.png);
+      @include retina {
+        background-image: url(../images/mobile/ice-crema_icon@2x.png);
       }
     }
   }
-  &_items {
-    max-width: 230px;
-    margin-left: auto;
-    margin-right: auto;
 
-    @media screen and (min-width: 768px) {
-      max-width: 152px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 368px;
-    }
-  }
-
-  &-background_svg {
-    position: relative;
+  &__numbers {
     margin-bottom: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50px;
-    height: 50px;
-    background: #f8d24e;
-    border-radius: 25px;
-  }
-
-  &_svg {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 36px;
-    height: 36.01px;
-  }
-
-  &_numbers {
-    // justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
 
     font-weight: 700;
     font-size: 36px;
-    line-height: 44px;
+    line-height: 1.22;
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    color: #fcfcfc;
+    color: $main-text-color;
+
+    @include tab {
+      margin-bottom: 12px;
+
+      font-size: 48px;
+      line-height: 1.23;
+    }
+    @include desktop {
+      font-size: 58px;
+      line-height: 1.22;
+    }
   }
 
-  &_text {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 28px;
+  &__text {
+    max-width: 230px;
+
     font-weight: 700;
     font-size: 12px;
-    line-height: 170%;
-
+    line-height: 1.7;
+    color: $main-text-color;
     text-align: center;
+    @include tab {
+      max-width: 152px;
 
-    color: #fcfcfc;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.74;
+    }
+    @include desktop {
+      max-width: 368px;
+
+      font-size: 16px;
+      line-height: 1.76;
+      letter-spacing: 0.02em;
+    }
   }
-}
-.span {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
 }
