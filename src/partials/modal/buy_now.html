@@ -40,10 +40,10 @@
 
     <ul class="form__list">
       <li class="form__item">
-        <input type="text" class="modal-input" placeholder="Name" name="name" required">
+        <input type="text" class="modal-input" placeholder="Name" pattern="^[a-zA-Z]+$" name="name" required">
       </li>
       <li class="form__item">
-        <input type="tel" class="modal-input" placeholder="Phone" name="tel" required>
+        <input type="tel" class="modal-input" placeholder="Phone" pattern="[0-9]{9}" name="tel" required>
       </li>
       <li class="form__item">
         <textarea class="modal-input comment-field" name="comment" id="comment" cols="20" rows="3" 
@@ -51,7 +51,7 @@
       </li>
     </ul>
 
-    <button class="submit-btn" type="button">
+    <button class="submit-btn" type="submit">
       Submit
     </button>
 
