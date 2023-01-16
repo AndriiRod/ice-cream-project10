@@ -1,3 +1,214 @@
+.column-reverse {
+  width: 210px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  @include tab {
+    width: auto;
+    margin-bottom: 72px;
+  }
+  @include desktop {
+    margin-bottom: 82px;
+  }
+}
+
 .about {
-  height: 1228px;
+  padding-top: 61px;
+  padding-bottom: 50px;
+  @include tab {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  @include desktop {
+    padding-bottom: 99px;
+  }
+  &__label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+
+    color: $main-text-color;
+
+    @include tab {
+      letter-spacing: 0.04em;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 27px;
+    }
+    @include desktop {
+      font-size: 30px;
+      line-height: 1.23;
+    }
+  }
+  &__title {
+    font-family: 'Seymour One';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.27;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $main-text-color;
+
+    @include tab {
+      font-size: 34px;
+      line-height: 1.26;
+      letter-spacing: 0.06em;
+    }
+
+    @include desktop {
+      font-size: 36px;
+      line-height: 1.25;
+    }
+  }
+
+  &__wrap {
+    @include tab {
+      display: flex;
+      gap: 38px;
+    }
+    @include desktop {
+      gap: 109px;
+    }
+  }
+
+  &__img-background {
+    position: relative;
+    width: 279px;
+    height: 278px;
+    border-radius: 140px;
+    margin: 0 auto;
+    margin-bottom: 62px;
+
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+
+    @include tab {
+      width: 330px;
+      height: 330px;
+      border-radius: 165px;
+      margin: 0;
+    }
+
+    @include desktop {
+      width: 490px;
+      height: 490px;
+      border-radius: 250px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 22px;
+
+    @include tab {
+      top: 26px;
+    }
+
+    @include desktop {
+      top: 39px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 10px;
+    @include tab {
+      margin-bottom: 32px;
+    }
+    @include desktop {
+      margin-bottom: 54px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 1.76;
+
+    letter-spacing: 0.04em;
+
+    color: $main-text-color;
+
+    @include tab {
+      text-align: left;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+  &__text--lh {
+    line-height: 1.62;
+    @include tab {
+      line-height: 1.76;
+    }
+    @include desktop {
+      line-height: 1.94;
+    }
+  }
+  &__text--none {
+    line-height: 1.94;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 4px;
+    @include tab {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description {
+    max-width: 220px;
+    margin: 0 auto;
+
+    text-align: center;
+    @include tab {
+      margin: 0;
+      margin-top: 8px;
+      max-width: 336px;
+    }
+
+    @include desktop {
+      max-width: 530px;
+      margin-top: 90px;
+    }
+  }
+  &__button {
+    @extend %btn;
+    padding: 12px 34px;
+    margin: 0 auto;
+    background-color: $accent-color;
+    color: #000000;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier,
+      background-color $animation-speed-hover $animation-cubic-bezier;
+    @include tab {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background-color: $btn-bg-hover;
+    }
+    &:focus {
+      color: $main-text-color;
+      background-color: $btn-bg-hover;
+    }
+  }
+  &__icon {
+    transition: fill $animation-speed-hover $animation-cubic-bezier;
+  }
+}
+
+.about__button:focus .about__icon {
+  fill: #fcfcfc;
 }
