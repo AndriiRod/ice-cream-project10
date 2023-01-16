@@ -219,8 +219,6 @@
   height: 42px;
   padding: 12px 40px;
   background: $accent-color;
-  color: #000000;
-  transition: backgraund $animation-speed-hover $animation-cubic-bezier;
 
   @media screen and (max-width: 767px) {
     margin-left: auto;
@@ -228,38 +226,31 @@
   }
 }
 .contacts__button--light {
+  color: $secondary-text-color;
   &:hover {
-    background: $btn-bg-hover;
-    color: $secondary-text-color;
+    background-color: $btn-bg-hover;
+    color: #000000;
   }
   &:focus {
-    background: $btn-bg-hover;
-    color: $main-text-color;
+    background-color: $btn-bg-hover;
+    color: #ffffff;
   }
 }
-.contacts-button__icon--orange:hover {
-  fill: $secondary-text-color;
+.contacts-button__icon--orange {
+  fill: currentColor;
 }
-.contacts-button__icon--orange:focus {
-  fill: $main-text-color;
-}
+
 .contacts__button--dark {
-  background: $main-bg-color;
+  background-color: $main-bg-color;
   border: 2px solid $accent-color;
+  color: #000000;
   &:hover {
-    background: $main-bg-color;
-    color: $secondary-text-color;
-    border: 2px solid $btn-bg-hover;
+    border-color: $btn-bg-hover;
   }
   &:focus {
-    background: $main-bg-color;
-    color: $main-text-color;
-    border: 2px solid $btn-bg-hover;
+    color: #ffffff;
   }
 }
-.contacts__button-icons--dark:hover {
-  fill: $secondary-text-color;
-}
-.contacts__button-icons--dark:focus {
-  fill: $main-text-color;
+.contacts__button-icon--dark {
+  fill: currentColor;
 }
