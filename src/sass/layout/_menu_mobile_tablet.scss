@@ -1,11 +1,9 @@
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  visibility: hidden;
-  pointer-events: none;
 
   padding: 20px 20px 0px 20px;
   top: 0px;
@@ -31,8 +29,8 @@
 
 .mobile-menu.is-open {
   transform: translateY(0);
-  visibility: visible;
-  pointer-events: initial;
+  // visibility: visible;
+  // pointer-events: initial;
   transition: visibility $animation-speed-hover $animation-cubic-bezier,
     transform $animation-speed-hover $animation-cubic-bezier;
 }
