@@ -1,225 +1,214 @@
-
-ul {
-   list-style: none; 
-   margin: 0;
-}
-// .column-reverse {
-// @media screen and (min-width: 480px) {
-//     display: flex;
-//     flex-wrap: wrap;
-//     flex-direction: column-reverse;
-// }
-
-// @media screen and (max-width: 480px) {
-//     flex-direction: column;
-// }
-// }
-
-.about {
-    &_label {
-        font-family: 'Montserrat';
-        font-style: normal; 
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        
-        text-align: center;
-        text-transform: uppercase;
- 
-        color: #FCFCFC;
-
-        margin-top: 61px;
-        margin-left: auto;
-        margin-right: auto;  
-        margin-bottom: 12px;  
-        @media screen and (min-width: 768px) {
-            letter-spacing: 0.04em;
-            max-width: 276px;
-            font-size: 22px;
-            font-weight: 800;
-            line-height: 27px;
-        }
-        @media screen and (min-width: 1200px) {
-            font-size: 30px;
-            line-height: 37px;
-            max-width: 376px;
-        } 
-       
-    }
-    &_title {
-font-family: 'Seymour One';
-font-style: normal;
-font-weight: 400;
-font-size: 30px;
-line-height: 38px;
-text-align: center;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-
-@media screen and (min-width: 768px) {
-font-size: 34px;
-line-height: 43px;
-letter-spacing: 0.06em;
-}
-
-@media screen and (min-width: 1200px) {
-   
-    font-size: 36px;
-line-height: 45px;
-text-align: center;
-
-}
-margin-bottom: 32px;
-
-color: #FCFCFC;
- 
-    }
-
-&-tub_flex {
-   @media screen and (min-width: 768px) {
-    align-items: center;
-    gap: 38px;
-    display: flex;
-   }
-    }
-
-   &_img_background { 
- width: 280px;
-margin: 31px ;
- margin-left: auto;
- margin-right: auto;
- border-radius: 140px;
-
-
- @media screen and (min-width: 480px) {
-    width: 279px;
-    border-radius: 140px;
- }
-
- @media screen and (min-width: 768px) {
-    width: 330px;
-    border-radius: 165px;
- }
-
- @media screen and (min-width: 1200px) {
-    width: 490px;
-    border-radius: 250px;
-  
- }
-
-background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
-box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
-
-    }
-
-   &_img {
-    position: relative;
-    top: 22px;
-    width: 100%;
-
-    @media screen and (min-width: 768px) {
-        width: 330px;
-        height: 330px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 490px;
-        height: 490px;   
-        top: 30px;
-    }
-}
-
-
-   &_text {
-margin-left: auto;
-margin-right: auto;
-font-weight: 400;
-font-size: 12px;
-line-height: 176%;
-
-
-text-align: center;
-align-items: center;
-
-@media screen and (min-width: 768px) {
-    text-align: left;
-    
-}
-
-@media screen and (min-width: 1200px) {
-     font-size: 16px;
-     width: 463px;
-}
-
-
-letter-spacing: 0.04em;
-
-
-color: #FCFCFC;
-
-   }
-  
-    &_item:not(:last-child) {
-        margin-bottom: 4px;
-    }
-   
-&-tub_list {
-    @media screen and (min-width: 768px) {
-        width: 300px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 463px;
-    }
-}
-}
-
-.button {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 12px 34px;
-  
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-  
-    border-radius: 10px;
-    border: none;
-
-    @media screen and (min-width: 768px) {
-        margin-left: 0;
-    }
-  
-    
-    background-color: #F8D24E ;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #0A8817;
-   }
-   &:focus {
-    color:  #FCFCFC;
-    background-color:  #0A8817;
-}
-
-  &_img {
-    width: 10px;
-    height: 10px;
-    text-align: center;
-
+.column-reverse {
+  width: 210px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  @include tab {
+    width: auto;
+    margin-bottom: 72px;
+  }
+  @include desktop {
+    margin-bottom: 82px;
   }
 }
- 
-.button:focus .button_img {
-    fill: #FFFFFF;
+
+.about {
+  padding-top: 61px;
+  padding-bottom: 50px;
+  @include tab {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  @include desktop {
+    padding-bottom: 99px;
+  }
+  &__label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+
+    color: $main-text-color;
+
+    @include tab {
+      letter-spacing: 0.04em;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 27px;
+    }
+    @include desktop {
+      font-size: 30px;
+      line-height: 1.23;
+    }
+  }
+  &__title {
+    font-family: 'Seymour One';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.27;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $main-text-color;
+
+    @include tab {
+      font-size: 34px;
+      line-height: 1.26;
+      letter-spacing: 0.06em;
+    }
+
+    @include desktop {
+      font-size: 36px;
+      line-height: 1.25;
+    }
+  }
+
+  &__wrap {
+    @include tab {
+      display: flex;
+      gap: 38px;
+    }
+    @include desktop {
+      gap: 109px;
+    }
+  }
+
+  &__img-background {
+    position: relative;
+    width: 279px;
+    height: 278px;
+    border-radius: 140px;
+    margin: 0 auto;
+    margin-bottom: 62px;
+
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+
+    @include tab {
+      width: 330px;
+      height: 330px;
+      border-radius: 165px;
+      margin: 0;
+    }
+
+    @include desktop {
+      width: 490px;
+      height: 490px;
+      border-radius: 250px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 22px;
+
+    @include tab {
+      top: 26px;
+    }
+
+    @include desktop {
+      top: 39px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 10px;
+    @include tab {
+      margin-bottom: 32px;
+    }
+    @include desktop {
+      margin-bottom: 54px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 1.76;
+
+    letter-spacing: 0.04em;
+
+    color: $main-text-color;
+
+    @include tab {
+      text-align: left;
+    }
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+  &__text--lh {
+    line-height: 1.62;
+    @include tab {
+      line-height: 1.76;
+    }
+    @include desktop {
+      line-height: 1.94;
+    }
+  }
+  &__text--none {
+    line-height: 1.94;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 4px;
+    @include tab {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__description {
+    max-width: 220px;
+    margin: 0 auto;
+
+    text-align: center;
+    @include tab {
+      margin: 0;
+      margin-top: 8px;
+      max-width: 336px;
+    }
+
+    @include desktop {
+      max-width: 530px;
+      margin-top: 90px;
+    }
+  }
+  &__button {
+    @extend %btn;
+    padding: 12px 34px;
+    margin: 0 auto;
+    background-color: $accent-color;
+    color: #000000;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier,
+      background-color $animation-speed-hover $animation-cubic-bezier;
+    @include tab {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background-color: $btn-bg-hover;
+    }
+    &:focus {
+      color: $main-text-color;
+      background-color: $btn-bg-hover;
+    }
+  }
+  &__icon {
+    transition: fill $animation-speed-hover $animation-cubic-bezier;
+  }
+}
+
+.about__button:focus .about__icon {
+  fill: #fcfcfc;
 }

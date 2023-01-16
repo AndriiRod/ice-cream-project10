@@ -1,40 +1,81 @@
 <!-- about  -->
-<section>
-    <div class="container">
-        <div class="column-reverse">
-<p class="about_label">
-    Tradition and love 
-</p>
-<h2 class="about_title">
-    How it’s made?
-</h2>
-</div>
-<!-- about img -->
-<div class="about-tub_flex">
-<div class="about_img_background">
-    <picture class="about_picture">
-        <source srcset="/src/images/mobile/mobile_about_1@1x.png 1x, ./images/mobile/mobile_about_1@2x.png 2x" media="(max-width:480px)">
-         <!-- <source srcset="/src/images/tab/tab-about.png 1x" media="(max-width:768px)"> -->
-         <source srcset="./images/desktop/desktop-about.png 1x" media="(max-width:1200px)">
-         <img  src="./images/desktop/desktop-about.png" alt="the cow is grazing" class="about_img">
-    </picture>
-  
-</div>
-<!-- about text -->
-<div class="about-tub_list">
-<ul class="about_list ">
-    <li class="about_item"><p class="about_text">Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts. </p></li>
-    <li class="about_item"><p class="about_text">We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes. This is enough to choose ice cream and coffee for any mood!</p></li>
-    
-</ul>
-<!-- about button -->
-<button class="button">Read more
-    <svg class="button_img">
-        <use href="/src/images/icon.svg#icon-arrow-right">
-    </use>
-    </svg>
-</button>
-</div>
-</div>
-</div>
+<section class="about">
+  <div class="container">
+    <div class="column-reverse">
+      <p class="about__label">Tradition and love</p>
+      <h2 class="about__title">How it’s made?</h2>
+    </div>
+    <!-- about img -->
+    <div class="about__wrap">
+      <div class="about__img-background">
+        <picture>
+          <source
+            srcset="
+              ./images/desktop/desktop_about@1x-min.png 1x,
+              ./images/desktop/desktop_about@2x-min.png 2x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/tab/tab_about@1x-min.png 1x,
+              ./images/tab/tab_about@2x-min.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/tab/tab_about@1x-min.png 1x,
+              ./images/tab/tab_about@2x-min.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/mobile/mobile_about_1@1x.png 1x,
+              ./images/mobile/mobile_about_1@2x.png 2x
+            "
+            media="(max-width:480px)"
+          />
+          <img
+            alt="the cow is grazing"
+            src="/src/images/mobile/mobile_about_1@1x.png"
+            class="about__img"
+          />
+        </picture>
+      </div>
+      <!-- about text -->
+      <div class="about__description">
+        <ul class="about__list">
+          <li class="about__item">
+            <p class="about__text">
+              Ice is a place where you will become not only a little happier,
+              but also healthier. Health is the main value for us, and we follow
+              it when creating our handmade desserts.
+            </p>
+          </li>
+          <li class="about__item">
+            <p class="about__text about__text--lh">
+              We use traditional recipes and 100% natural ingredients. Our
+              products are so natural that they can be given to children from
+              the age of three years. Sweets lovers can expect 55 types of ice
+              cream, 15 types of coffee and 23 milkshakes.
+            </p>
+          </li>
+          <li class="about__item">
+            <p class="about__text about__text--none">
+              This is enough to choose ice cream and coffee for any mood!
+            </p>
+          </li>
+        </ul>
+        <!-- about button -->
+        <button class="about__button">
+          Read more
+          <svg width="12" height="12" class="about__icon">
+            <use href="/src/images/icon.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
