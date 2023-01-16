@@ -10,7 +10,6 @@
   opacity: 0;
   // overflow-y: scroll;
   visibility: hidden;
-  // pointer-events: none;
 
   transition: opacity $animation-speed-modal $animation-cubic-bezier,
     visibility $animation-speed-modal $animation-cubic-bezier;
@@ -20,4 +19,5 @@
 .backdrop.active {
   opacity: 1;
   visibility: visible;
+  // pointer-events: none;
 }
