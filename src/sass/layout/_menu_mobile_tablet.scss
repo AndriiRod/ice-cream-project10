@@ -1,49 +1,122 @@
 .mobile-menu {
-  display: none;
-}
-
-.mobile-menu.is-open {
-  padding: 52px 20px 0px 20px;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 44.5px;
+
+  padding: 20px 20px 0px 20px;
+  top: 0px;
   left: 0;
   width: 100%;
   height: 100vh;
 
+  // @media screen and (max-width: 768px) and (max-width: 1200px) {
+  //   width: auto;
+  // }
+
   background-color: $main-bg-color;
 
-  z-index: 999;
+  z-index: 99999;
+
+  transform: translateY(-100%);
+  transition: visibility 250ms linear, transform 250ms linear;
+
+  @include tab {
+    padding: 20px 32px 0px 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.mobile-menu.is-open {
+  transform: translateY(0);
+  // visibility: visible;
+  // pointer-events: initial;
+  transition: visibility $animation-speed-hover $animation-cubic-bezier,
+    transform $animation-speed-hover $animation-cubic-bezier;
+}
+
+.mobile-menu__position-heder {
+  display: flex;
+  align-items: center;
+
+  // width: 100%;
+}
+
+.mobile-menu__position-heder .logo {
+  margin-right: auto;
+}
+
+.mobile-menu__navigation {
+  margin-top: 51px;
+  margin-bottom: 110px;
 
   @include smart {
-    padding: 40px 20px 0px 20px;
+    margin-top: 45px;
+    margin-bottom: 114px;
   }
 
   @include tab {
-    padding: 76px 32px 0px 32px;
+    margin-top: 76px;
+  }
+
+  @media screen and (max-height: 540px) {
+    margin-top: 35px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    &:not(:last-child) {
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-height: 390px) {
+    &:not(:last-child) {
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
   }
 }
 
 .mobile-menu__list {
-  margin-bottom: 110px;
   text-align: center;
 }
 
 .mobile-menu__item {
   &:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
 
-  @include smart {
-    margin-bottom: 114px;
+  @media screen and (max-height: 540px) {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  @media screen and (max-height: 450px) {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  @media screen and (max-height: 390px) {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (max-height: 320px) {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 }
-
 .mobile-menu__link {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -55,6 +128,21 @@
     font-size: 48px;
     line-height: 59px;
   }
+
+  @media screen and (max-height: 540px) {
+    font-size: 35px;
+    line-height: 1.18;
+  }
+
+  @media screen and (max-height: 450px) {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  @media screen and (max-height: 390px) {
+    font-size: 30px;
+    line-height: 1.11;
+  }
 }
 
 .mobile-menu__link:hover,
@@ -63,25 +151,33 @@
 }
 
 .mobile-menu__button {
+  @extend %btn;
+
+  padding: 12px 36px;
+  width: 152px;
   line-height: 1.21;
 
   color: #000000;
-
   background: $accent-color;
-  padding: 12px 36px;
-  width: 152px;
 
-  @extend %btn;
+  // @media screen and (orientation: landscape) {
+  //   display: flex;
+  // }
 
   @include tab {
     display: none;
   }
-}
 
-.mobile-menu-button.is-open ~ .hero-button {
-  display: none;
-}
+  &:hover {
+    background-color: $btn-bg-hover;
+  }
 
-.mobile-menu-button.is-open {
-  margin-right: 0px;
+  &:focus {
+    background-color: $btn-bg-hover;
+    color: #ffffff;
+  }
+
+  &:disabled {
+    background-color: $btn-bg-disabled;
+  }
 }
