@@ -6,6 +6,7 @@
   const ourProducts = document.querySelector('.js-our-products-close-menu');
   const contacts = document.querySelector('.js-contacts-close-menu');
   const buyNow = document.querySelector('.js-buy-now-close-menu');
+  const home = document.querySelector('.js-home-close-menu');
 
   const toggleMenu = () => {
     const isMenuOpen =
@@ -25,6 +26,7 @@
   ourProducts.addEventListener('click', toggleMenu);
   contacts.addEventListener('click', toggleMenu);
   buyNow.addEventListener('click', toggleMenu);
+  home.addEventListener('click', toggleMenu);
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 1200px)').addEventListener('change', e => {
