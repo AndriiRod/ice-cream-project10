@@ -12,24 +12,24 @@
   transform: translate(-50%, -50%);
   z-index: 30;
 
-  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
 
   border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
-  border: 2px solid #F8D24E;
+  border: 2px solid #f8d24e;
   border-radius: 10px;
 
   @include tab {
-      width: 568px;
-      height: 644px;
-    }
+    width: 568px;
+    height: 644px;
+  }
 
   @include desktop {
     width: 568px;
     height: 644px;
-    }
+  }
 }
 
 .modal.active,
@@ -57,10 +57,10 @@
   line-height: 1.5;
 
   @include tab {
-      margin-bottom: 103px;
-      font-size: 20px;
-      line-height: 1.4;
-    }
+    margin-bottom: 103px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
 
   @include desktop {
     margin-bottom: 103px;
@@ -76,18 +76,18 @@
   margin-bottom: 32px;
 
   @include tab {
-      flex-direction: row;
-      gap: 32px;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 
   @include desktop {
-      flex-direction: row;
-      gap: 32px;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 }
 
 .checkbox__item {
@@ -111,17 +111,17 @@
   width: 132px;
   padding-top: 90px;
   padding-bottom: 20px;
-  
+
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
   border-radius: 15px;
 
-  font-family: 'Montserrat';    
+  font-family: 'Montserrat';
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
   letter-spacing: 0.04em;
-  text-transform: uppercase;  
+  text-transform: uppercase;
   color: $secondary-text-color;
 
   &::before {
@@ -141,7 +141,7 @@
 }
 
 .ice-cream__modal {
-  border: 2px solid #96AF8C;
+  border: 2px solid #96af8c;
   &::before {
     background-color: rgba(156, 190, 143, 0.7);
     background-image: url('../images/mobile/mobile_products_1@1x.png');
@@ -150,7 +150,7 @@
 }
 
 .ice-coffee_modal {
-  border: 2px solid #EFD478;
+  border: 2px solid #efd478;
   &::before {
     background-color: #efd478;
     background-image: url('../images/mobile/mobile_products_2@1x.png');
@@ -159,10 +159,10 @@
 }
 
 .milkshake_modal {
-  border: 2px solid #D6936D;
+  border: 2px solid #d6936d;
 
   &::before {
-  background-color: #d6936d;
+    background-color: #d6936d;
     background-image: url('../images/mobile/mobile_products_3@1x.png');
     box-shadow: 0px 5.34219px 20.0332px rgba(153, 114, 23, 0.25);
   }
@@ -173,15 +173,15 @@
 }
 
 .checkbox__input:checked + .ice-cream__modal {
-background-color: #96AF8C;
+  background-color: #96af8c;
 }
 
-.checkbox__input:checked+.ice-coffee_modal {
-  background-color: #EFD478;
+.checkbox__input:checked + .ice-coffee_modal {
+  background-color: #efd478;
 }
 
-.checkbox__input:checked+.milkshake_modal {
-  background-color: #D6936D;
+.checkbox__input:checked + .milkshake_modal {
+  background-color: #d6936d;
 }
 
 .form__list {
@@ -193,10 +193,10 @@ background-color: #96AF8C;
   padding-right: 28px;
 
   @include tab {
-      padding-left: 100px;
-      padding-right: 100px;
-      margin-bottom: 32px;
-    }
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 32px;
+  }
 
   @include desktop {
     padding-left: 100px;
@@ -213,13 +213,13 @@ background-color: #96AF8C;
   width: 100%;
   height: 32px;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84A178;
+  border: 1px solid #84a178;
   border-radius: 10px;
   padding-left: 12px;
 
   &:placeholder-shown {
-      border: 1px solid #84A178;
-    }
+    border: 1px solid #84a178;
+  }
 
   &::placeholder {
     font-family: 'Montserrat';
@@ -230,7 +230,7 @@ background-color: #96AF8C;
 }
 
 input:placeholder-shown {
-  border: 1px solid #84A178;
+  border: 1px solid #84a178;
 }
 
 input:invalid {
@@ -250,7 +250,7 @@ textarea {
   display: inline-flex;
   margin-bottom: 32px;
   padding: 12px 34px;
-  background: #F8D24E;
+  background: #f8d24e;
   border-radius: 10px;
 
   font-family: 'Montserrat';
