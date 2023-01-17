@@ -119,6 +119,9 @@
   background-color: transparent;
   border: none;
   padding: 0px;
+  color: #ffffff;
+
+  transition: color $animation-speed-hover $animation-cubic-bezier;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-right: 32px;
@@ -127,8 +130,20 @@
   @media screen and (min-width: 1199px) {
     display: none;
   }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-.icon-cross {
-  fill: #ffffff;
+.mobile-menu__icon-cross {
+  fill: currentColor;
+  transition: transform $animation-speed-hover $animation-cubic-bezier;
+  .mobile-menu-button:hover &,
+  .mobile-menu-button:focus & {
+    transform: rotate(180deg);
+  }
+}
+.icon-menu {
+  fill: currentColor;
 }

@@ -1,0 +1,65 @@
+.modal {
+  opacity: 0;
+  visibility: hidden;
+
+  width: 100vw;
+  height: 100%;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(0.1);
+  z-index: 30;
+
+  overflow: auto;
+  text-align: center;
+
+  border-radius: 3px;
+  background-color: $main-text-color;
+  transition: transform $animation-speed-modal $animation-cubic-bezier,
+    opacity $animation-speed-modal $animation-cubic-bezier,
+    $animation-speed-modal visibility $animation-cubic-bezier;
+  border: 2px solid $accent-color;
+  border-radius: 10px;
+  &-cross {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    color: $secondary-text-color;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: background-color $animation-speed-hover $animation-cubic-bezier;
+    @include tab {
+      width: 24px;
+      height: 24px;
+    }
+    &:hover,
+    &:focus {
+      background-color: #ffe99f;
+    }
+    &__icon {
+      width: 20px;
+      height: 20px;
+      color: currentColor;
+      transition: transform $animation-speed-hover $animation-cubic-bezier;
+      @include tab {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+.modal-cross:hover .modal-cross__icon,
+.modal-cross:focus .modal-cross__icon {
+  transform: scale(0.8);
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}

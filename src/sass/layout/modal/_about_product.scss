@@ -1,14 +1,7 @@
 .modal-ingredients {
-  position: fixed;
-  background-color: white;
   max-width: 280px;
   padding: 28px 18px;
   border-radius: 10px;
-  border: 2px solid #f8d24e;
-
-  opacity: 0;
-  visibility: hidden;
-  z-index: 30;
   @include tab {
     min-width: 568px;
     padding: 32px 40px;
@@ -208,38 +201,12 @@
   align-items: center;
   text-align: center;
 
-  background-color: #f8d24e;
+  background-color: $accent-color;
   &:hover,
   &:focus {
-    background-color: #0a8817;
+    background-color: $btn-bg-hover;
   }
   @include tab {
     min-width: 121px;
   }
-}
-.close-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: calc(12px - 4px);
-  right: calc(12px - 4px);
-
-  padding: 4px;
-  border: 1px solid transparent;
-  border: none;
-  border-radius: 50%;
-  background-color: transparent;
-  width: 24px;
-  height: 24px;
-  &:hover,
-  &:focus {
-    background-color: #ababab;
-  }
-  @include tab {
-    width: 28px;
-    height: 28px;
-  }
-}
-.close-button__icon {
 }

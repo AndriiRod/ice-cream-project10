@@ -8,16 +8,15 @@
   z-index: 20;
 
   opacity: 0;
-  // overflow-y: scroll;
+
   visibility: hidden;
 
   transition: opacity $animation-speed-modal $animation-cubic-bezier,
-    visibility $animation-speed-modal $animation-cubic-bezier;
+    visibility $animation-speed-modal $animation-cubic-bezier,
+    background-color $animation-speed-modal $animation-cubic-bezier;
 }
 
-.modal.active,
 .backdrop.active {
   opacity: 1;
   visibility: visible;
-  // pointer-events: none;
 }
