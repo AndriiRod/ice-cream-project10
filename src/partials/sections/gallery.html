@@ -1,45 +1,60 @@
 <section class="gallery">
   <div class="container">
-    <h2 class="visually-hidden">Gallery</h2>
+    <h2 class="visually-hidden">gallery</h2>
     <div class="gallery__list">
       <div class="gallery__item">
-        <div class="gallery__wrap">
-          <picture class="bloack">
-            <source
-              srcset="
-                ./images/desktop/desktop_gallery_1@1x-min.jpg 1x,
-                ./images/desktop/desktop_gallery_1@1x-min.jpg 2x
-              "
-              media="(min-width:1200px)"
-            />
-            <source
-              srcset="
-                ./images/tab/tab_gallery_1@1x-min.jpg 1x,
-                ./images/tab/tab_gallery_1@1x-min.jpg 2x
-              "
-              media="(min-width:768px)"
-            />
-            <source
-              srcset="
-                ./images/mobile/mobile_gallery_1@1x-min.jpg 1x,
-                ./images/mobile/mobile_gallery_1@1x-min.jpg 2x
-              "
-              media="(min-width:480px)"
-            />
-            <source
-              srcset="
-                ./images/mobile/mobile320_gallery_1@1x-min.jpg 1x,
-                ./images/mobile/mobile320_gallery_1@1x-min.jpg 1x
-              "
-              media="(min-width:320px)"
-            />
-            <img
-              src="./images/desktop/desktop_gallery_1@1x-min.jpg"
-              alt="ice cream cones"
-              class="gallery__img"
-            />
-          </picture>
-        </div>
+        <img
+          srcset="
+            ./images/mobile/mobile320_gallery_1@1x-min.jpg  280w,
+            ./images/mobile/mobile320_gallery_1@2x-min.jpg  560w,
+            ./images/mobile/mobile_gallery_1@1x-min.jpg     440w,
+            ./images/mobile/mobile_gallery_1@2x-min.jpg     880w,
+            ./images/tab/tab_gallery_1@1x-min.jpg           704w,
+            ./images/tab/tab_gallery_1@2x-min.jpg          1408w,
+            ./images/desktop/desktop_gallery_1@1x-min.jpg  1013w,
+            ./images/desktop/desktop_gallery_1@2x-min.jpg  2026w
+          "
+          src="./images/mobile/mobile320_gallery_1@1x-min.jpg"
+          alt="ice cream"
+          class="gallery__img"
+          sizes="100vw"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          srcset="
+            ./images/mobile/mobile320_gallery_2@1x-min.jpg  312w,
+            ./images/mobile/mobile320_gallery_2@2x-min.jpg  624w,
+            ./images/mobile/mobile_gallery_2@1x-min.jpg     490w,
+            ./images/mobile/mobile_gallery_2@2x-min.jpg     979w,
+            ./images/tab/tab_gallery_2@1x-min.jpg           785w,
+            ./images/tab/tab_gallery_2@2x-min.jpg          1570w,
+            ./images/desktop/desktop_gallery_2@1x-min.jpg  1013w,
+            ./images/desktop/desktop_gallery_2@2x-min.jpg  2026w
+          "
+          src="./images/mobile/mobile320_gallery_2@1x-min.jpg"
+          alt="ice cream"
+          class="gallery__img"
+          sizes="100vw"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          srcset="
+            ./images/mobile/mobile320_gallery_3@1x-min.jpg  280w,
+            ./images/mobile/mobile320_gallery_3@2x-min.jpg  560w,
+            ./images/mobile/mobile_gallery_3@1x-min.jpg     440w,
+            ./images/mobile/mobile_gallery_3@2x-min.jpg     880w,
+            ./images/tab/tab_gallery_3@1x-min.jpg           704w,
+            ./images/tab/tab_gallery_3@2x-min.jpg          1408w,
+            ./images/desktop/desktop_gallery_3@1x-min.jpg  1013w,
+            ./images/desktop/desktop_gallery_3@2x-min.jpg  2026w
+          "
+          src="./images/mobile/mobile320_gallery_3@1x-min.jpg"
+          alt="ice cream"
+          class="gallery__img"
+          sizes="100vw"
+        />
       </div>
     </div>
   </div>

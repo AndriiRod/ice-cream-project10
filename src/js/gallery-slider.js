@@ -4,6 +4,6 @@ $('.gallery__list').slick({
   speed: 1000,
   fade: true,
   cssEase: 'linear',
-  autoplay: true,
   arrows: false,
+  autoplay: true,
 });
