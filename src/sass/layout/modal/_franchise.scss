@@ -1,9 +1,9 @@
 .franchese-modal {
   width: 280px;
   padding: 28px 29px 28px 28px;
+  height: auto;
 
   @include tab {
-    height: auto;
     width: 568px;
     padding: 32px 60px;
   }

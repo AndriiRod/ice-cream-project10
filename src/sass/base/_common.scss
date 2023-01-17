@@ -4,10 +4,16 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $main-bg-color;
+  cursor: url('../images/cursor-def.png'), auto;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+button:hover,
+a:hover {
+  cursor: url('../images/cursor-pointer.png'), auto;
 }
