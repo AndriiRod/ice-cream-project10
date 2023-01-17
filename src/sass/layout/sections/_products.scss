@@ -87,6 +87,7 @@
 .products__item {
   display: flex;
   width: 280px;
+  transition: transform $animation-speed-hover $animation-cubic-bezier;
 
   @include smart {
     width: 250px;
@@ -98,6 +99,9 @@
 
   @include desktop {
     flex-basis: calc((100% - 60px) / 3);
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -272,4 +276,13 @@
   margin-top: auto;
 
   background-color: transparent;
+  transition: color $animation-speed-modal $animation-cubic-bezier;
+}
+.products__discript-icon {
+  fill: currentColor;
+  transition: transform $animation-speed-modal $animation-cubic-bezier;
+  .products__discript-btn:hover &,
+  .products__discript-btn:focus & {
+    transform: rotate(-90deg);
+  }
 }

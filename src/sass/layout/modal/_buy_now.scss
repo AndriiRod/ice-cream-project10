@@ -121,6 +121,7 @@
 
 .ice-cream__modal {
   border: 2px solid #96af8c;
+  transition: background-color $animation-speed-modal $animation-cubic-bezier;
   &::before {
     background-color: rgba(156, 190, 143, 0.7);
     background-image: url('../images/mobile/mobile_products_1@1x.png');
@@ -130,6 +131,7 @@
 
 .ice-coffee_modal {
   border: 2px solid #efd478;
+  transition: background-color $animation-speed-modal $animation-cubic-bezier;
   &::before {
     background-color: #efd478;
     background-image: url('../images/mobile/mobile_products_2@1x.png');
@@ -139,7 +141,7 @@
 
 .milkshake_modal {
   border: 2px solid #d6936d;
-
+  transition: background-color $animation-speed-modal $animation-cubic-bezier;
   &::before {
     background-color: #d6936d;
     background-image: url('../images/mobile/mobile_products_3@1x.png');

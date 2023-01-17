@@ -52,7 +52,7 @@
 .contacts__card {
   padding-top: 40px;
 
-  background: $main-text-color;
+  background-color: $main-text-color;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 
@@ -219,8 +219,7 @@
   height: 42px;
   padding: 12px 40px;
   background: $accent-color;
-  transition: color $animation-speed-hover $animation-cubic-bezier,
-    background-color $animation-speed-hover $animation-cubic-bezier;
+
   @media screen and (max-width: 767px) {
     margin-left: auto;
     margin-right: auto;

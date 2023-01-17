@@ -79,9 +79,6 @@
 
   background: $accent-color;
 
-  transition: background-color $animation-speed-hover $animation-cubic-bezier,
-    color $animation-speed-hover c$animation-cubic-bezier;
-
   @media screen and (max-width: 767px) {
     display: none;
   }
